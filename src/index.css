@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-primary: #818cf8; /* Indigo 400 */
+  --color-secondary: #c084fc; /* Purple 400 */
+  --color-accent: #f472b6; /* Pink 400 */
+  --color-surface: #0f172a; /* Slate 900 */
+  --color-background: #020617; /* Slate 950 */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-slate-200 font-sans antialiased selection:bg-primary/30 selection:text-white;
+  }
+}
+
+.glass {
+  @apply bg-slate-900/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+}
+
+.glass-morphism {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px -5px rgba(129, 140, 248, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 30px -10px rgba(192, 132, 252, 0.4);
+}
